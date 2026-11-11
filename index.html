@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exercise</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 5px;
+      }
+
+      .item-1 {
+        grid-column: 1 / -1;
+      }
+
+      .item-2 {
+        grid-column: 1;
+      }
+
+      .item-3 {
+        grid-column: 2;
+      }
+
+      .item-4 {
+        grid-column: 3;
+      }
+
+      .item-5 {
+        grid-column: 1 / -1;
+      }
+
+      .grid-container-2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+        gap: 1rem;
+      }
+
+      .grid-item {
+        padding: 1.5rem 2rem;
+      }
+
+      .sub-item {
+        padding: 0.4rem 0.5rem;
+      }
+
+      .sub-item p {
+        font-size: 0.6rem;
+      }
+
+      h1 {
+        font-size: 0.75rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="grid-container">
+      <header class="grid-item item-1"><h1>Item 1</h1></header>
+      <aside class="grid-item item-2"><h1>Item 2</h1></aside>
+      <section class="grid-item item-3">
+        <h1>Item 3</h1>
+        <div class="grid-container-2">
+          <div class="sub-item"><p>Sub-item1</p></div>
+          <div class="sub-item"><p>Sub-item2</p></div>
+          <div class="sub-item"><p>Sub-item3</p></div>
+          <div class="sub-item"><p>Sub-item4</p></div>
+          <div class="sub-item"><p>Sub-item5</p></div>
+        </div>
+      </section>
+      <aside class="grid-item item-4"><h1>Item 4</h1></aside>
+      <footer class="grid-item item-5"><h1>Item 5</h1></footer>
+    </main>
+  </body>
+</html>
